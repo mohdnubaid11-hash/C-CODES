@@ -164,3 +164,205 @@ int main() {
     }
     return 0;
 } 
+
+LOOP PATTERN 
+closed square 
+#include <stdio.h>
+int main() {
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+closed rectangle 
+#include <stdio.h>
+int main() {
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 6; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    return 0;
+} 
+
+Increasing Star Triangle (Right angle triangle)
+#include <stdio.h>
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    return 0;
+} 
+
+Decreasing Star Triangle (Inverse of Right angle triangle)
+#include <stdio.h>
+int main() {
+    for (int i = 5; i >= 1; i--) {
+        for (int j = 1; j <= i; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    return 0;
+} 
+
+Right-Aligned Triangle
+#include <stdio.h>
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        for (int j = 1; j <= 5 - i; j++) {
+            printf("  "); 
+        }
+        for (int k = 1; k <= i; k++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    return 0;
+} 
+
+Inverse Right-Aligned Triangle 
+#include <stdio.h>
+int main() {
+    for (int i = 5; i >= 1; i--) {
+        for (int j = 1; j <= 5 - i; j++) {
+            printf("  ");
+        }
+        for (int k = 1; k <= i; k++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    return 0;
+} 
+
+Hollow Square 
+#include <stdio.h>
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        for (int j = 1; j <= 5; j++) {
+            if (i == 1 || i == 5 || j == 1 || j == 5) {
+                printf("* ");
+            } 
+            else {
+                printf("  "); 
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}  
+
+Hollow Right Triangle
+#include <stdio.h>
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        for (int j = 1; j <= i; j++) {
+            if (j == 1 || i == 5 || j == i) {
+                printf("* ");
+            } 
+            else {
+                printf("  ");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+} 
+
+Hollow Inverted Right Triangle
+#include <stdio.h>
+int main() {
+    for (int i = 5; i >= 1; i--) {
+        for (int j = 1; j <= i; j++) {
+            if (i == 5 || j == 1 || j == i) {
+                printf("* ");
+            } 
+            else {
+                printf("  "); 
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+} 
+
+Hollow Pyramid 
+#include <stdio.h>
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        for (int j = 1; j <= 5 - i; j++) {
+            printf(" ");
+        }
+        for (int k = 1; k <= (2 * i - 1); k++) {
+            if (k == 1 || k == (2 * i - 1) || i == 5) {
+                printf("*");
+            } 
+            else {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+} 
+
+Hollow Inverted Pyramid 
+#include <stdio.h>
+int main() {
+    for (int i = 5; i >= 1; i--) {
+        for (int j = 1; j <= 5 - i; j++) {
+            printf(" ");
+        }
+        for (int k = 1; k <= (2 * i - 1); k++) {
+            if (i == 5 || k == 1 || k == (2 * i - 1)) {
+                printf("*");
+            } 
+            else {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+} 
+
+Hollow Diamond 
+#include <stdio.h>
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        for (int j = 1; j <= 5 - i; j++) {
+            printf(" ");
+        }
+        for (int k = 1; k <= (2 * i - 1); k++) {
+            if (k == 1 || k == (2 * i - 1)) {
+                printf("*");
+            } else {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    for (int i = 4; i >= 1; i--) {
+        for (int j = 1; j <= 5 - i; j++) {
+            printf(" ");
+        }
+        for (int k = 1; k <= (2 * i - 1); k++) {
+            if (k == 1 || k == (2 * i - 1)) {
+                printf("*");
+            } else {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
